@@ -24,7 +24,7 @@ def test_get_possible_ids(example_game_records) -> None:
 
 
 @pytest.mark.parametrize(
-    "game_records_name,expected",
+    "game_records_name, expected",
     [("example_game_records", 8), ("actual_game_records", 2505)],
 )
 def test_possible_id_sum(
@@ -39,7 +39,7 @@ def test_get_power(example_game_records) -> None:
 
 
 @pytest.mark.parametrize(
-    "game_records_name,expected",
+    "game_records_name, expected",
     [("example_game_records", 2286), ("actual_game_records", 70265)],
 )
 def test_power_sum(

@@ -38,7 +38,7 @@ def test_get_part_numbers(example_schematic) -> None:
 
 
 @pytest.mark.parametrize(
-    "schematic_name,expected",
+    "schematic_name, expected",
     [("example_schematic", 4361), ("actual_schematic", 540212)],
 )
 def test_part_number_sum(
@@ -53,7 +53,7 @@ def test_get_gear_ratios(example_schematic) -> None:
 
 
 @pytest.mark.parametrize(
-    "schematic_name,expected",
+    "schematic_name, expected",
     [("example_schematic", 467835), ("actual_schematic", 87605697)],
 )
 def test_gear_ratio_sum(
