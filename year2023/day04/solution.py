@@ -4,8 +4,7 @@ from typing import Iterable, Iterator
 
 from copy_queue import CopyQueue
 
-NUMBER_PATTERN = rf"\d+"
-NUMBER_LIST_PATTERN = rf"{NUMBER_PATTERN}(?:\s+{NUMBER_PATTERN})*"
+NUMBER_LIST_PATTERN = rf"\d+(?:\s+\d+)*"
 CARD_PATTERN = rf"Card\s+(?P<id>\d+):\s*(?P<winning_numbers>{NUMBER_LIST_PATTERN})\s*\|\s*(?P<your_numbers>{NUMBER_LIST_PATTERN})"
 
 
