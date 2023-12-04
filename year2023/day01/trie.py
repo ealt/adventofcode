@@ -1,11 +1,11 @@
 from collections import defaultdict
-from typing import DefaultDict, Iterable, Optional
+from typing import Iterable, Optional
 
 
 class Node:
     def __init__(self):
         self.terminal: bool = True
-        self.children: DefaultDict[str, Node] = defaultdict(Node)
+        self.children: defaultdict[str, Node] = defaultdict(Node)
 
 
 class Trie:
