@@ -13,12 +13,12 @@ class SchematicExplorer(abc.ABC):
 
     @property
     @abc.abstractmethod
-    def _part(self) -> bool:
+    def _is_part(self) -> bool:
         pass
 
     @property
     def _part_number(self) -> int:
-        if self._part and self._digits:
+        if self._is_part and self._digits:
             return int("".join(self._digits))
         return 0
 

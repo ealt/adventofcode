@@ -20,7 +20,7 @@ class GearFinder(SchematicExplorer):
         }
 
     @property
-    def _part(self) -> bool:
+    def _is_part(self) -> bool:
         return len(self._neighboring_gears) > 0
 
     def _is_symbol(self, val: str) -> bool:

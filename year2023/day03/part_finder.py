@@ -15,7 +15,7 @@ class PartFinder(SchematicExplorer):
         return self._part_numbers
 
     @property
-    def _part(self) -> bool:
+    def _is_part(self) -> bool:
         return self._has_adjacent_symbol
 
     def _is_symbol(self, val: str) -> bool:
@@ -29,7 +29,7 @@ class PartFinder(SchematicExplorer):
         super().explore(schematic)
 
     def _add_digit(self, digit: str, pos: Position, schematic: Sequence[str]) -> None:
-        if not self._part:
+        if not self._is_part:
             self._has_adjacent_symbol = any(
                 self._get_adjacent_symbol_positions(pos, schematic)
             )
